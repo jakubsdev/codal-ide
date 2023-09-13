@@ -1,0 +1,9 @@
+.profile {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "navbar"
+        "snippets";
+}

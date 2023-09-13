@@ -1,0 +1,49 @@
+version: "3"
+services:
+  react-app:
+    image: react-app
+    build: ./frontend/
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - compiler-app
+    depends_on:
+      - codal-lsp
+  api-server:
+    image: api-server
+    build: ./backend
+    ports:
+      - "5000:5000"
+    networks:
+      - compiler-app
+    depends_on:
+      - mongo
+      - redis
+  mongo:
+    image: mongo:6.0.3-focal
+    ports:
+      - "27018:27017"
+    networks:
+      - "compiler-app"
+    volumes:
+      - mongo-data:/data/db
+  redis:
+    image: redis:7.0.7-alpine
+    expose:
+      - "6379"
+    networks:
+      - "compiler-app"
+  codal-lsp:
+    image: codal-lsp
+    build: ./backend/codal-lsp/
+    ports:
+      - "4000:4000"
+    networks:
+      - compiler-app
+networks:
+  compiler-app:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local

@@ -1,0 +1,31 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declarationDir": "dist",
+    "jsx": "react",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "types": ["react/next", "react-dom/next"],
+  "references": [
+    {
+      "path": "../../client"
+    },
+    {
+      "path": "../../vscode-ws-jsonrpc"
+    }
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/defaultCode.js",
+    "src/theme.json",
+    "src/Navbar.jsx",
+    "src/Sidebar.jsx",
+    "src/MonacoEditor.jsx",
+    "src/main.tsx"
+  ],
+  "exclude": ["dist"]
+}

@@ -1,0 +1,82 @@
+.app {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar editor";
+}
+
+.btn {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #7928c1;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.margin-btn {
+  margin: 0.7rem 0;
+}
+
+.btn:hover {
+  filter: brightness(115%);
+  transition: ease-out 0.15s;
+  cursor: pointer;
+}
+
+.console {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  right: 0;
+  width: calc(100vw - 200px);
+  height: auto;
+  overflow-y: auto;
+  background-color: #191c20;
+  border-left: 1px solid #2b3036;
+  display: flex;
+  flex-direction: column;
+}
+
+.console-bar {
+  position: sticky;
+  background-color: #191c20;
+  top: 0;
+  display: flex;
+  height: 35px;
+  width: 100%;
+  padding: 0 20px;
+  align-items: center;
+  order: -1;
+  border-bottom: 1px solid #2b3036;
+  flex-shrink: 0;
+}
+
+.console-bar:hover {
+  cursor: pointer;
+}
+
+.console-bar p:last-of-type {
+  margin-left: auto;
+}
+
+.console.expanded {
+  height: 35vh;
+}
+
+.console-output {
+  padding: 10px 20px;
+}
+
+.console .hidden {
+  display: none;
+}
+
+.editing-text {
+  color: #525861;
+  margin-bottom: 5px;
+}

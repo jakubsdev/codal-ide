@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&display=swap");
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+  grid-area: navbar;
+  padding: 0 20px;
+  border-bottom: 1px solid #2b3036;
+}
+tspan {
+  white-space: pre;
+}
+.s0 {
+  fill: url(#g1);
+}
+.logo {
+  display: block;
+  height: 80%;
+  width: auto;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.logo > svg {
+  height: 100%;
+  width: auto;
+}
+.heading-secondary {
+  color: #3d434b;
+}
+.login-btn {
+  border: none;
+  border-radius: 6px;
+  margin-left: auto;
+  color: #ffffff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.9rem;
+  background-color: #7928c1;
+  padding: 15px;
+  height: 80%;
+}
+.login-btn:hover {
+  cursor: pointer;
+  background-color: #5d18cc;
+  transition: ease-in 0.15s;
+}
+
+.logged-btn {
+  display: flex;
+  position: relative;
+  gap: 10px;
+  border-radius: 6px;
+  margin-left: auto;
+  height: 80%;
+  align-items: center;
+  font-size: 0.9rem;
+  background-color: #2b3036;
+  padding: 15px;
+}
+
+.avatar {
+  height: 40px;
+  border-radius: 50%;
+  width: auto;
+}
+
+.logged-btn:hover {
+  cursor: pointer;
+  background-color: #3c434b;
+  transition: ease-in 0.15s;
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  border-radius: 6px;
+  z-index: 100;
+  width: 100%;
+  background-color: #3c434b;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.dropdown.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: 200ms ease;
+}
+
+.dropdown.inactive {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: 200ms ease;
+}
+
+.dropdown-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #3c434b;
+  border-radius: 6px;
+}
+
+.dropdown-item:hover {
+  filter: brightness(120%);
+}

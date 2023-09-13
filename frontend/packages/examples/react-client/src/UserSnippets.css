@@ -1,0 +1,30 @@
+.snippet-list {
+  padding: 10px 50px;
+}
+.snippet {
+  list-style-type: none;
+  background-color: #2b3036;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.snippet div {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.snippet div:last-of-type {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.snippet div:last-of-type button {
+  margin-left: 35px;
+}
+.snippet p {
+  color: #83868b;
+}
+.delete {
+  background-color: #4c555f;
+}

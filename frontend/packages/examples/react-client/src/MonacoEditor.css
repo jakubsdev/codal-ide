@@ -1,0 +1,5 @@
+.editor {
+    height: calc(100vh - 60px);
+    width: calc(100vw - 200px);
+    grid-area: editor;
+}
